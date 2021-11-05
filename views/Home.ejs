@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U save it</title>
+    <%- include('./partials/head') %>
 </head>
 <body>
+
+    <header class="home">
+
+        <nav>
+            <ul>
+                <li class="mais"><a href="#">Saiba mais</a></li>
+                <li class="criar"><a href="#">Criar conta</a></li>
+                <li class="entrar2"><a href="/login">Entrar</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="banner">
+    <img src="/img/logo.png" class="logo" alt="">
+    <p class="txtHome">Onde você salva seus livros,<br> séries, animes.<br> 
+        tudo num lugar só e<br> compartilhando com os amigos.</p>
+        <div class="fotoBanner">
+            <img src="/img/Group 13.png">
+        </div>
+    </section>
+<main class="mainHome">   
     
+
+  <div class="boxHome">
+        
+        <p class="txtHome2"><strong>U save it</strong> é a plataforma para salvar seus<br>
+            livros, animes, mangas, séries tudo num<br> só lugar.<br><br>
+            Aqui você também pode compartilhar<br> suas 
+            reviews sobre os conteúdos e<br> indicar para seus amigos.</p>
+            <p class="maisTxt">Saiba mais</p>
+</div>
+
+</main>
+
+    <%- include('partials/footer') %>
 </body>
 </html>

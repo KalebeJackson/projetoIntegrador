@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body{
-    background: rgba(226, 128, 83, 0.75);
     margin: 0px;
+    width: 1304px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-
+/*CSS do login*/
 .titulo{
     font-style: normal;
     font-weight: bold;
@@ -88,14 +87,112 @@ p{
     justify-content: center;
     margin-top: -15px;
 }
-
+/*CSS do footer*/
 footer{
-    background-color: rgb(247, 245, 225);
-    margin: 200px 0px 0px 0px;
+    background-color: #F7FFF5;
+    margin:0px;
     width: 1304px;
 }
 
 hr{
     width: 1200px;
     margin-top: 10px;
+}
+
+/*CSS da Navbar*/
+header nav ul {
+    list-style: none;
+    background-color:#ebf3e400;
+    height: 67px;
+    margin-top: 0px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+header nav ul li a:any-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    display: flex;
+    
+}
+
+/*CSS da Home*/
+
+.fotoBanner{
+    float: right;
+    margin-top: -488px;
+}
+
+.criar{
+    background-color: #78796B;
+    border-radius: 6px;
+}
+
+.entrar2{
+    background-color:#FF8A4A;
+    border-radius: 6px;
+}
+
+.mais{
+    background-color:#FF8A4A;
+    border-radius: 6px;
+    margin-left: 850px;
+}
+
+.logo{
+    margin-left: 90px; 
+    margin-top: 80px;
+}
+
+.banner{
+    background-color:#EBF3E4;  
+    height: 772px;  
+    margin-top: -30px;
+}
+
+.boxHome{
+    
+    height: 679px;
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+.maisTxt{
+    
+    padding: 320px 0px 0px 90px;
+    color: #78796B;
+
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+}
+
+
+
+.txtHome{
+    color:#78796B; 
+    text-align: center;
+    font-size: 20px;
+    width: 245px;
+    margin-left: 100px;
+    width: 307px;
+}
+
+.txtHome2{
+    position: absolute;
+    margin-left: 504px;
+    color: #FF8A4A;
+    text-align: center;
+    padding: 202px 0px 0px 0px;
+}
+
+.mainHome{
+    background-image: url(../img/Group\ 14.png);
 }
