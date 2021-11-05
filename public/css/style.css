@@ -105,11 +105,19 @@ header nav ul {
     background-color:#ebf3e400;
     height: 67px;
     margin-top: 0px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: baseline;
 }
 
 header nav ul li {
     display: inline-block;
     margin-top: 5px;
+
 }
 
 header nav ul li a:any-link {
@@ -117,10 +125,9 @@ header nav ul li a:any-link {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
-    display: inline-block;
+    /* display: inline-block; */
     padding: 10px;
-    display: flex;
-    
+    display: flex;   
 }
 
 /*CSS da Home*/
