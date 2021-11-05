@@ -1,205 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
 
 body{
-    margin: 0px;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-/*CSS do login*/
-.titulo{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    margin: 0px;
-    text-align: center;
+    background: #E5EAE3;
 }
 
-.caixa{
-    width: 420px;
-    height: 314px;
-    background-color: rgba(247, 255, 245, 0.9);
-    border-radius: 10px;
-    padding: 5px 30px 30px 60px;
-    margin-left: 410px;
-    margin-top: 200px;
-    text-align: center;
-}
-
-.email{
-    width: 370px;
-    height: 54px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    border-style: none;
-}
-
-.senha{
-    width: 370px;
-    height: 54px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    border-style: none;
-}
-
-.entrar{
-    width: 368px;
-    height: 32px;
-    background-color: #FF8A4A;
-    border-style: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    color: white;
-}
-
-.caixa2{
-    background-color: white;
-    margin-left: 25px;
-    width: 368px;
-    height: 56px;
-    margin-top: 20px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    display: flex;
-    border-radius: 10px;
-}
 
 p{
     margin-left: 30px;
 }
 
-.google{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
+header {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.facebook{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
+nav {
+    margin: 0;
+    list-style: none;
+    height: 65px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#F7FFF5;
+    color: #FF8A4A;
+
 }
 
-.coluna1{
-    display: inline;
+div.form_div {
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    background-color:#E5E5E5;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 35px;
 }
+
+input[type=text] {
+    width: 150px;
+    height: 10px;
+    background-color: #fffbff10;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-left: 30px;
+    margin-top: 20px;    
+}
+
 
 .termos{
     display: flex;
     justify-content: center;
     margin-top: -15px;
 }
-/*CSS do footer*/
+
 footer{
-    background-color: #F7FFF5;
-    margin:0px;
-    width: 1304px;
+    background-color:#F7FFF5;
+    color: #FF8A4A;
+    margin: 200px 0px 0px 0px;
+    width: 100%;
 }
 
 hr{
-    width: 1200px;
+    width: 80%;
     margin-top: 10px;
-}
-
-/*CSS da Navbar*/
-header nav ul {
-    list-style: none;
-    background-color:#ebf3e400;
-    height: 67px;
-    margin-top: 0px;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    align-items: baseline;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-top: 5px;
-
-}
-
-header nav ul li a:any-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    /* display: inline-block; */
-    padding: 10px;
-    display: flex;   
-}
-
-/*CSS da Home*/
-
-.fotoBanner{
-    float: right;
-    margin-top: -488px;
-}
-
-.criar{
-    background-color: #78796B;
-    border-radius: 6px;
-}
-
-.entrar2{
-    background-color:#FF8A4A;
-    border-radius: 6px;
-}
-
-.mais{
-    background-color:#FF8A4A;
-    border-radius: 6px;
-    margin-left: 850px;
-}
-
-.logo{
-    margin-left: 90px; 
-    margin-top: 80px;
-}
-
-.banner{
-    background-color:#EBF3E4;  
-    height: 772px;  
-    margin-top: -30px;
-}
-
-.boxHome{
-    
-    height: 679px;
-    font-size: 30px;
-    margin-top: -30px;
-}
-
-.maisTxt{
-    
-    padding: 320px 0px 0px 90px;
-    color: #78796B;
-
-    font-style: normal;
-    font-weight: bold;
-    line-height: 56px;
-}
-
-
-
-.txtHome{
-    color:#78796B; 
-    text-align: center;
-    font-size: 20px;
-    width: 245px;
-    margin-left: 100px;
-    width: 307px;
-}
-
-.txtHome2{
-    position: absolute;
-    margin-left: 504px;
-    color: #FF8A4A;
-    text-align: center;
-    padding: 202px 0px 0px 0px;
-}
-
-.mainHome{
-    background-image: url(../img/Group\ 14.png);
 }
