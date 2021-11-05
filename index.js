@@ -28,7 +28,7 @@ app.get('/perfil',(req,res)=> {
 app.get('/cadastro',(req,res)=> {
     return res.render('cadastro')
     })
-   
+
 
 app.get('/home',(req,res)=> {
     return res.render('home')
