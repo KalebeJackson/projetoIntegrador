@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
+const bcrypt = require('bcrypt')
 const loginRouter = require('./routes/login')
 const perfilRouter = require('./routes/perfil')
+const usuarios = require("./routes/usuario")
 
 
 app.use(express.json())
@@ -45,6 +47,8 @@ app.get('/editarPerfil',(req,res)=> {
 app.get('/comunidade',(req,res)=> {
     return res.render('comunidade')
     })
+
+app.use("/usuarios", usuarios)
 
 app.listen(8000, () => {
     console.log('Servidor rodando')
