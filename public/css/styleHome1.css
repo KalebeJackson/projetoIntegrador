@@ -133,8 +133,9 @@ header nav ul li a:any-link {
 /*CSS da Home*/
 
 .fotoBanner{
-    float: right;
+    display: flex;
     margin-top: -488px;
+    justify-content: flex-end;
 }
 
 .criar{
