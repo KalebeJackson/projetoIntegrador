@@ -10,13 +10,14 @@ app.use(express.urlencoded({extended: false}))
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
-app.use('../controllers/login')
+app.use(loginRouter)
 app.use(perfilRouter)
 
 
 app.get('/',(req,res)=> {
 return res.render('home')
 })
+
 app.get('/login',(req,res)=> {
     return res.render('login.html')
     })
@@ -28,7 +29,6 @@ app.get('/perfil',(req,res)=> {
 app.get('/cadastro',(req,res)=> {
     return res.render('cadastro')
     })
-
 
 app.get('/home',(req,res)=> {
     return res.render('home')
