@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}))
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
-app.use(loginRouter)
+app.use('../controllers/login')
 app.use(perfilRouter)
 
 
