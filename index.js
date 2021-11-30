@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const loginRouter = require('./routes/login')
 const perfilRouter = require('./routes/perfil')
 const usuarios = require("./routes/usuario")
+const multer = require('multer')
 
 
 app.use(express.json())
@@ -48,7 +49,6 @@ app.get('/comunidade',(req,res)=> {
     return res.render('comunidade')
     })
 
-app.use("/usuarios", usuarios)
 
 app.listen(8000, () => {
     console.log('Servidor rodando')

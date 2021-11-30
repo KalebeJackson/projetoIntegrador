@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const perfilController = require('.././controlers/perfilController')
+const perfilController = require('../controllers/perfilController')
 
 router.get('/perfil', perfilController.index)
 
