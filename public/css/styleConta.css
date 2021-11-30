@@ -1,0 +1,41 @@
+recomendados{
+    text-align: center
+}
+
+/*CSS do footer*/
+footer{
+    background-color: #F7FFF5;
+    margin:  212px 0px -8px -10px;
+    width: 1306px;
+}
+
+hr{
+    width: 1200px;
+    margin-top: 10px;
+}
+
+/*CSS da Navbar*/
+header nav ul {
+    list-style: none;
+    background-color:#ebf3e400;
+    height: 67px;
+    margin-top: 0px;
+    
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+header nav ul li a:any-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    display: flex;
+    
+}
+
