@@ -7,7 +7,7 @@ const storage = require('../config/storage')
 const uploadAvatar = storage('avatar', '/cadastro')
 
 router.use(loginMiddleware)
-router.get('/', cadastrocoController.index)
+router.get('/', cadastroController.index)
 router.post('/', uploadAvatar,  cadastroController.save)
 
 
