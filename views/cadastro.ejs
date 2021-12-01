@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U Save It</title>
-</head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>U Save it</title>
+        <link rel="stylesheet" href=".././public/css/style-cadastro.css">
+    </head>
 <body>
+
+<form action="/action_page.php" style="border:1px solid #F7FFF5">
+  <div class="container">
+    <h1>Criar conta</h1>
+    <hr>
+
+    <label for="email"><b>nome</b></label>
+    <input type="text" placeholder="nome" name="email" required>
+
+    <label for="email"><b>email</b></label>
+    <input type="email" placeholder="e-mail" name="email" required>
+<br><br>
+    <label for="psw"><b>senha</b></label>
+    <input type="password" placeholder="insira sua senha" name="psw" required>
+
+    <label for="psw-repeat"><b>repita sua senha</b></label>
+    <input type="password" placeholder="coloque sua senha novamente" name="psw-repeat" required>
     
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar de mim
+    </label>
+    
+    <p>Ao criar sua conta você concorda com nossos termos <a href="#" style="color:dodgerblue">Termos e Privacidade</a>.</p>
+
+    <div class="clearfix">
+      <!-- <button type="button" class="cancelbtn">Cancelar</button> -->
+      <button type="submit" class="signupbtn">Criar</button>
+    </div>
+  </div>
+</form>
+<footer>
+    <br/><hr>
+    <div class="termos">
+        <p>Termos e condições</p>
+        <p>Politica de Cookies</p>
+        <p>Politica de privacidade</p>
+        <p> u save it 2021, Todos os direitos reservados</p>
+    </div>
+</footer>
 </body>
 </html>
