@@ -6,10 +6,8 @@ const perfilRouter = require('./routes/perfil')
 const usuarios = require("./routes/usuario")
 const multer = require('multer')
 
-
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -20,14 +18,6 @@ app.use(perfilRouter)
 app.get('/',(req,res)=> {
 return res.render('home')
 })
-
-app.get('/login',(req,res)=> {
-    return res.render('login.html')
-    })
-
-app.get('/perfil',(req,res)=> {
-     return res.render('perfil')
-    })
 
 app.get('/cadastro',(req,res)=> {
     return res.render('cadastro')
