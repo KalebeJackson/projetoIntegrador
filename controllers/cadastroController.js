@@ -1,5 +1,5 @@
 const { v4: uuid } = require('uuid');
-const storage = require('/config/storage')
+const storage = require('../config/storage')
 const fs = require('fs');
 
 
