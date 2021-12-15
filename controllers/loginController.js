@@ -1,3 +1,5 @@
+const {Usuario} = require('../models/Usuario')
+
 const loginController = {
     index: (req,res) =>{
         return res.render('login')
