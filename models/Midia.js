@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const SerieAnime = sequelize.define('SerieAnime', {
+    const Midia = sequelize.define('Midia', {
         id: {
             type: dataTypes.INTEGER, 
             allowNull: false,
@@ -31,20 +31,24 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
-        capitulo: {
+        capitulos: {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
-            timestamps: false
-    });
+    },
+        {
+            timestamps: false,
+            tableName: "midia"
+        }
+    );
 
-    SerieAnime.associate = (Models) => {
-        SerieAnime.hasMany(Models.Genero, {  //acessando o model Genero
+    Midia.associate = (Models) => {
+        Midia.hasMany(Models.Genero, {  //acessando o model Genero
             trough: 'genero',
             foreignKey: 'genero_id',
             as: 'genero'
         });
         
     }
-    return SerieAnime
+    return Midia
 }

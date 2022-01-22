@@ -10,7 +10,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false,
         }
-    })
+    },
+    {
+        timestamps: false,
+        tableName: "genero"
+    }
+    )
 
     Genero.associate = (Models) => {
         Genero.belongsTo(Models.Midia, {  //acessando o model Midia

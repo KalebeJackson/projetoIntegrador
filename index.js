@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const loginRouter = require('./routes/login')
 const perfilRouter = require('./routes/perfil')
 const usuarios = require("./routes/usuario")
+const contaRouter = require("./routes/conta")
 const multer = require('multer')
 
 app.use(express.json())
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(loginRouter)
 app.use(perfilRouter)
+app.use(contaRouter)
 
 
 app.get('/',(req,res)=> {

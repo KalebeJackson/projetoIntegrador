@@ -1,6 +1,13 @@
-const contaController = {
-    index: (req,res) =>{
-        return res.render('conta')
+const {Midia} = require('./../models')
+
+const midiaController = {
+    index: async (req, res) => {
+        try {
+        const listar =  await Midia.findAll()
+        return res.json(listar)
+        } catch (error) {
+            console.log(error)
+        }
     }}
 
-    module.exports = contaController
+    module.exports =  midiaController

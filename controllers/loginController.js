@@ -1,7 +1,7 @@
 const {Usuario} = require('../models/Usuario')
 
 const loginController = {
-    index: (req,res) =>{
+    index: async (req,res) =>{
         return res.render('login')
     },
     postLogin: (req, res) => {
