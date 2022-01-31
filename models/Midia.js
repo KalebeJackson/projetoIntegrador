@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const Midia = sequelize.define('Midia', {
         id: {
-            type: dataTypes.INTEGER, 
+            type: dataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
@@ -36,19 +36,18 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
     },
-        {
+       {
             timestamps: false,
             tableName: "midia"
         }
-    );
-
+    )
     Midia.associate = (Models) => {
-        Midia.hasMany(Models.Genero, {  //acessando o model Genero
+        Midia.hasMany(Models.Genero, { //acessando o model Genero
             trough: 'genero',
             foreignKey: 'genero_id',
             as: 'genero'
         });
-        
+
     }
     return Midia
 }
