@@ -3,7 +3,7 @@ const app = express();
 const bcrypt = require("bcrypt");
 const loginRouter = require("./routes/login");
 const perfilRouter = require("./routes/perfil");
-const usuarios = require("./routes/usuario");
+// const usuarioRouter = require("./routes/usuario");
 const contaRouter = require("./routes/conta");
 const multer = require("multer");
 
@@ -17,33 +17,33 @@ app.use(perfilRouter);
 app.use(contaRouter);
 
 app.get("/", (req, res) => {
-  return res.render("home");
+    return res.render("home");
 });
 
 app.get("/cadastro", (req, res) => {
-  return res.render("cadastro");
+    return res.render("cadastro");
 });
 
 app.get("/home", (req, res) => {
-  return res.render("home");
+    return res.render("home");
 });
 
 app.get("/configuracao", (req, res) => {
-  return res.render("configuracao");
+    return res.render("configuracao");
 });
 
 app.get("/editarPerfil", (req, res) => {
-  return res.render("editarPerfil");
+    return res.render("editarPerfil");
 });
 
 app.get("/comunidade", (req, res) => {
-  return res.render("comunidade");
+    return res.render("comunidade");
 });
 
 app.get("/minhaConta", (req, res) => {
-  return res.render("perfil");
+    return res.render("perfil");
 });
 
 app.listen(8000, () => {
-  console.log("Servidor rodando");
+    console.log("Servidor rodando");
 });
