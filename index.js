@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
@@ -45,6 +46,10 @@ app.get('/conteudo', (req, res) => {
     return res.render('conteudo')
 })
 
+app.get("/minhaConta", (req, res) => {
+    return res.render("perfil");
+});
+
 app.listen(8000, () => {
-    console.log('Servidor rodando')
-})
+    console.log("Servidor rodando");
+});
