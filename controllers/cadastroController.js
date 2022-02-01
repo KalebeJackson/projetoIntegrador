@@ -1,13 +1,12 @@
 const { v4: uuid } = require('uuid');
-const storage = require('../config/storage')
 const fs = require('fs');
 
 
 const cadastroController = {
     index: (req, res) => {
         let content = fs.readFileSync("./db.json", "utf8")
-        const db = JSON.parse(content) 
-                
+        const db = JSON.parse(content)
+
     },
 
     store: (req, res) => {
@@ -20,12 +19,12 @@ const cadastroController = {
 
         let content = fs.readFileSync("./db.json", "utf8")
         const db = JSON.parse(content)
-        
-        db.servicos.push({ id: uuid(), nome, valor: Number(valor), avatar})
-        
+
+        db.servicos.push({ id: uuid(), nome, valor: Number(valor), avatar })
+
         content = JSON.stringify(db)
         fs.writeFileSync("./db.json", content, "utf8")
-        
+
         return res.redirect('/cadastro');
     },
 
@@ -33,7 +32,7 @@ const cadastroController = {
         const { id } = req.params
         let content = fs.readFileSync("./db.json", "utf8")
         const db = JSON.parse(content)
-        
+
         const cadastro = db.cadastro.find(cadastro => cadastro.id == id);
 
         return res.render('cadastro/edit', { cadastro })
@@ -42,12 +41,12 @@ const cadastroController = {
     update: (req, res) => {
         const { nome, valor } = req.body
         const { id } = req.params
-        
+
         let content = fs.readFileSync("./db.json", "utf8")
         const db = JSON.parse(content)
-        
-        const cadastroIndex = db.cadastro.findIndex(cadastro => cadastro.id == id); 
-        
+
+        const cadastroIndex = db.cadastro.findIndex(cadastro => cadastro.id == id);
+
         if (req.file) {
             avatar = '/img/cadastro/' + req.file.originalname
         }
@@ -58,9 +57,9 @@ const cadastroController = {
             email,
             avatar
         }
-        
-        db.cadastro[cadastroIndex] = cadastroAtualizado; 
-        
+
+        db.cadastro[cadastroIndex] = cadastroAtualizado;
+
         content = JSON.stringify(db)
         fs.writeFileSync("./db.json", content, "utf8")
 
@@ -72,16 +71,16 @@ const cadastroController = {
         const { id } = req.params;
         let content = fs.readFileSync("./db.json", "utf8")
         const db = JSON.parse(content)
-        
-        db.cadastro.push({ id: uuid(), nome, email, avatar})
-        
+
+        db.cadastro.push({ id: uuid(), nome, email, avatar })
+
         const cadastroIndex = db.cadastro.findIndex(cadastro => cadastro.id == id);
-        
+
         db.cadaastro.splice(cadastroIndex, 1);
-        
+
         content = JSON.stringify(db)
         fs.writeFileSync("./db.json", content, "utf8")
-        
+
         return res.redirect('/cadastro');
     }
 }
