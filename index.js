@@ -17,7 +17,6 @@ app.use(loginRouter)
 app.use(perfilRouter)
 app.use(contaRouter)
 
-
 app.get('/', (req, res) => {
     return res.render('home')
 })
