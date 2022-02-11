@@ -10,13 +10,13 @@ module.exports = {
      */
      return await queryInterface.createTable('tipos', {
       id: {
-        type: dataTypes.INTEGER, 
+        type: Sequelize.INTEGER, 
         allowNull: false,
         autoIncrement: true,
         primaryKey: true
     },
     nome: {
-        type: dataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false,
     }
      })
