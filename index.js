@@ -8,6 +8,7 @@ const usuarios = require("./routes/usuario")
 const contaRouter = require("./routes/conta")
 const multer = require('multer')
 
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
  
@@ -16,6 +17,7 @@ app.use(express.static('public'))
 app.use(loginRouter)
 app.use(perfilRouter)
 app.use(contaRouter)
+app.use(usuarios)
 
 app.get('/', (req, res) => {
     return res.render('home')
