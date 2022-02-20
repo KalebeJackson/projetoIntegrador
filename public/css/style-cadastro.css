@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+html{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
 body{
     margin: 0px;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(../img/fundo-login.png);
+    background-color:#FF8A4A;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
-/*CSS do login*/
+/*CSS do cadastro*/
 .titulo{
     font-style: normal;
     font-weight: bold;
@@ -16,8 +26,8 @@ body{
 
 .caixa{
     width: 420px;
-    height: 314px;
-    background-color: rgba(247, 255, 245, 0.9);
+    height: 560px;
+    background:rgba(247, 255, 245, 0.9);
     border-radius: 10px;
     padding: 5px 30px 30px 60px;
     margin-left: 410px;
@@ -25,78 +35,11 @@ body{
     text-align: center;
 }
 
-.email{
-    width: 370px;
-    height: 54px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    border-style: none;
-}
-
-.senha{
-    width: 370px;
-    height: 54px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    border-style: none;
-}
-
-.entrar{
-    width: 368px;
-    height: 32px;
-    background-color: #FF8A4A;
-    border-style: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    color: white;
-}
-
-.caixa2{
-    background-color: white;
-    margin-left: 25px;
-    width: 368px;
-    height: 56px;
-    margin-top: 20px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    display: flex;
-    border-radius: 10px;
-}
-
-p{
-    margin-left: 30px;
-}
-
-.google{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
-}
-
-.facebook{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
-}
-
-.coluna1{
-    display: inline;
-}
 
 .termos{
     display: flex;
     justify-content: center;
     margin-top: -15px;
-}
-/*CSS do footer*/
-footer{
-    background-color: #F7FFF5;
-    margin:0px;
-    width: 1304px;
-}
-
-hr{
-    width: 1200px;
-    margin-top: 10px;
 }
 
 /*CSS da Navbar*/
@@ -107,7 +50,7 @@ header nav ul {
     margin-top: 0px;
     display: flex;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-end;
@@ -117,106 +60,32 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     margin-top: 5px;
+    justify-content: flex-end;
 
 }
 
 header nav ul li a:any-link {
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: 700;
     color: #fff;
-    /* display: inline-block; */
+    display: inline-block;
     padding: 10px;
-    display: flex;   
-}
-
-/*CSS da Home*/
-
-.fotoBanner{
     display: flex;
-    margin-top: -488px;
     justify-content: flex-end;
 }
 
-.criar{
-    background-color: #78796B;
-    border-radius: 6px;
-}
-
-.entrar2{
-    background-color:#FF8A4A;
-    border-radius: 6px;
-}
-
-.mais{
-    background-color:#FF8A4A;
-    border-radius: 6px;
-    margin-left: 850px;
-}
-
-.logo{
-    margin-left: 90px; 
-    margin-top: 80px;
-}
-
-.banner{
-    background-color:#EBF3E4;  
-    height: 772px;  
-    margin-top: -30px;
-}
-
-.boxHome{
-    
-    height: 679px;
-    font-size: 30px;
-    margin-top: -30px;
-}
-
-.maisTxt{
-    
-    padding: 320px 0px 0px 90px;
-    color: #78796B;
-
-    font-style: normal;
-    font-weight: bold;
-    line-height: 56px;
-}
-
-
-
-.txtHome{
-    color:#78796B; 
-    text-align: center;
-    font-size: 20px;
-    width: 245px;
-    margin-left: 100px;
-    width: 307px;
-}
-
-.txtHome2{
-    position: absolute;
-    margin-left: 504px;
-    color: #FF8A4A;
-    text-align: center;
-    padding: 202px 0px 0px 0px;
-}
-
-.mainHome{
-    background-image: url(../img/Group\ 14.png);
-}
-
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
+/* forms */
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  justify-content: center
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -224,9 +93,11 @@ input[type=text]:focus, input[type=password]:focus {
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
+  width: 80%;
+  margin-top: 10px;
 }
 
-/* Set a style for all buttons */
+/* botão */
 button {
   background-color: #ff9d4d;
   color: white;
@@ -242,67 +113,31 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* Add padding to container elements */
 .container {
   padding: 16px;
 }
 
-/* Clear floats */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-html{
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-}
-
-
-body {
-
-  }
-  
-  .comunidade {
-    background-image: url("/public/img/bg-comunidade.JPG");
-    background-color:#FF8A4A;
-    height: 1200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
-  .comunidade-texto {
-    text-align: right;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-  }
 
 header {
     font-size: 18px;
@@ -327,27 +162,22 @@ p {
     margin: 30px;
 }
 
-div.form_div {
-    width: 250px;
-    height: 40px;
-    border-radius: 50px;
-    background-color:#E5E5E5;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-right: 35px;
+.criar{
+    background-color: #78796B;
+    border-radius: 6px;
 }
 
-input[type=text] {
-    width: 150px;
-    height: 10px;
-    background-color: #fffbff10;
-    border: none;
-    margin-left: 20px;
-    margin-right: 20px;
+.entrar2{
+    background-color:#FF8A4A;
+    border-radius: 6px;
+}
+
+.mais{
+    background-color:#FF8A4A;
+    border-radius: 6px;
+    margin-left: 1200px;
+    
+
 }
 
 ul {
@@ -374,9 +204,4 @@ footer{
     color: #FF8A4A;
     margin: 200px 0px 0px 0px;
     width: 100%;
-}
-
-hr{
-    width: 80%;
-    margin-top: 10px;
 }

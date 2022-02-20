@@ -25,25 +25,25 @@
       <main>
         <div class="container">
     
-            <div class="box-white">
-                <h1>Criar Conta</h1>
+            <div class="caixa">
+                <p class ="titulo">Criar Conta</h1>
 
                 <% if (typeof erro !== "undefined") { %>
                     <p><%= erro %></p>
                 <% } %>
     
                 <form action="/cadastro" method="POST">
-                    <label for="nome">nome</label>
-                    <input type="text" name="nome" id="nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome"> <br>
     
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email"> <br>
     
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha"><br>
 
                     <label for="confirmaSenha">Confirmar senha</label>
-                    <input type="password" name="confirmaSenha" id="confirmaSenha">
+                    <input type="password" name="confirmaSenha" id="confirmaSenha"><br>
     
                     <button type="submit">enviar</button>
                 </form>
