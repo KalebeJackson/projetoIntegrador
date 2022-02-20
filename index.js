@@ -6,6 +6,7 @@ const loginRouter = require('./routes/login')
 const perfilRouter = require('./routes/perfil')
 const usuarios = require("./routes/usuario")
 const contaRouter = require("./routes/conta")
+const loginController = require("./controllers/loginController")
 const multer = require('multer')
 
 
@@ -18,6 +19,7 @@ app.use(loginRouter)
 app.use(perfilRouter)
 app.use(contaRouter)
 app.use(usuarios)
+
 
 app.get('/', (req, res) => {
     return res.render('home')

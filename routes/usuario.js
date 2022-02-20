@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cadastroController = require('../controllers/cadastroController');
+// const cadastroController = require('../controllers/cadastroController');
 const router = express.Router();
 
 

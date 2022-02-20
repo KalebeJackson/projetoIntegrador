@@ -1,25 +1,30 @@
 const {Usuario} = require('../models/Usuario')
+// const botao = document.querySelector('.entrar')
 
+// botao.onclick = function(){
+//     alert('oi')
+// }
 const loginController = {
     index: async (req,res) =>{
         return res.render('login')
     },
     postLogin: (req, res) => {
-        Usuario
+   
         const { email, senha } = req.body
-
-        const usuario = Usuario.find(usuario => usuario.email == email)
-
-        if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
+        console.log(email,senha)
+        console.log(Usuario)
+        const usuario = Usuario.findUnique(email)
+        // const login = Usuario.find(senha)
+        if(senha !== usuario.senha){
             return res.status(400).json({ mensagem: "Email ou senha estão incorretos ou não existem!" });
         }
 
-
-        req.session.usuario = usuario
-
-        res.redirect('/servicos')
+        if (!usuario) {
+            return res.status(400).json({ mensagem: "Email ou senha estão incorretos ou não existem!" });
+        }else{
+            res.redirect('/conta')
+        }
     }
 }
-
     module.exports = loginController
 
