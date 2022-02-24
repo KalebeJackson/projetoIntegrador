@@ -21,17 +21,7 @@
     <li><img src="/img/Rectangle 24.png" alt=""></li>
     <li><img src="/img/Rectangle 20.png" alt=""></li> -->
 
-    <div class="splide">
-        <div class="splide__track">
-              <ul class="splide__list">
-                  <% for(let i=0; i < listaConteudo.length; i++){%>
-                      <li class="splide__slide">
-                          <%= listaConteudo[i].nome %>
-                      </li>
-                      <% } %>
-              </ul>
-        </div>
-      </div>
+                
             
 
         <h3>Seus últimos save</h3>
@@ -56,6 +46,7 @@
 
 
         <%- include('./partials/footer')%>
+        <script src="../js/conta.js"></script>
 </body>
 
 </html>
