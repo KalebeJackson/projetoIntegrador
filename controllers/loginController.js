@@ -1,30 +1,39 @@
-const {Usuario} = require('../models/Usuario')
+const { Usuario } = require("../models");
 // const botao = document.querySelector('.entrar')
 
 // botao.onclick = function(){
 //     alert('oi')
 // }
 const loginController = {
-    index: async (req,res) =>{
-        return res.render('login')
-    },
-    postLogin: (req, res) => {
-   
-        const { email, senha } = req.body
-        console.log(email,senha)
-        console.log(Usuario)
-        const usuario = Usuario.findUnique(email)
-        // const login = Usuario.find(senha)
-        if(senha !== usuario.senha){
-            return res.status(400).json({ mensagem: "Email ou senha estão incorretos ou não existem!" });
-        }
+  index: async (req, res) => {
+    return res.render("login");
+  },
+  postLogin: async (req, res) => {
+    try {
+      const { email, senha } = req.body;
+      const usuario = await Usuario.findOne({
+        where: { email: email }
+      });
+      console.log(senha)
+      if (!usuario) {
+        return res
+          .status(400)
+          .json({
+            mensagem: "Email ou senha estão incorretos ou não existem!",
+          });}
+      if (Number(senha) !== usuario.senha) {
+        return res
+          .status(400)
+          .json({
+            mensagem: "Email ou senha estão incorretos ou não existem!",
+          });
 
-        if (!usuario) {
-            return res.status(400).json({ mensagem: "Email ou senha estão incorretos ou não existem!" });
-        }else{
-            res.redirect('/conta')
-        }
+      } else {
+        return res.json(usuario);
+      }
+    } catch (error) {
+      console.log(error);
     }
-}
-    module.exports = loginController
-
+  },
+};
+module.exports = loginController;
