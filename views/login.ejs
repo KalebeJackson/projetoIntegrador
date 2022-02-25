@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>U Save It</title>
-        <link rel="stylesheet" href="/css/styleLogin.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Save It</title>
+    <link rel="stylesheet" href="/css/styleLogin.css">
+</head>
+
 <body>
-    <header class="home">
 
-        <nav>
-            <ul>
-                <li class="mais"><a href="#">Saiba mais</a></li>
-                <li class="criar"><a href="#">Criar conta</a></li>
-                <li class="entrar2"><a href="/login">Entrar</a></li>
-            </ul>
-        </nav>
-
-    </header>
-    
     <div class="caixa">
         <p class="titulo">Fazer Login</p>
         <input type="email" name="email" placeholder="email" class="email"><br><br>
         <input type="password" name="password" placeholder="senha" class="senha"><br><br>
-        <input type="submit" class="entrar" value="Entrar">
+        <input type="button" class="entrar" value="Entrar">
         <div class="caixa2">
             <img src="img/facebook 1.png" alt="" class="facebook">
             <img src="img/google 1.png" alt="" class="google">
@@ -33,13 +24,13 @@
             </p>
         </div>
     </div>
-    
+
     <div class="img1"></div>
     <div class="img2"></div>
     <div class="img3"></div>
     <div class="img4"></div>
-    
-   
     <%- include('partials/footer') %>
+    <script src="../js/login.js"></script>
 </body>
+
 </html>

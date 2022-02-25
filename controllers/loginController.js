@@ -1,25 +1,39 @@
-const {Usuario} = require('../models/Usuario')
+const { Usuario } = require("../models");
+// const botao = document.querySelector('.entrar')
 
+// botao.onclick = function(){
+//     alert('oi')
+// }
 const loginController = {
-    index: async (req,res) =>{
-        return res.render('login')
-    },
-    postLogin: (req, res) => {
-        Usuario
-        const { email, senha } = req.body
+  index: async (req, res) => {
+    return res.render("login");
+  },
+  postLogin: async (req, res) => {
+    try {
+      const { email, senha } = req.body;
+      const usuario = await Usuario.findOne({
+        where: { email: email }
+      });
+      console.log(senha)
+      if (!usuario) {
+        return res
+          .status(400)
+          .json({
+            mensagem: "Email ou senha estão incorretos ou não existem!",
+          });}
+      if (Number(senha) !== usuario.senha) {
+        return res
+          .status(400)
+          .json({
+            mensagem: "Email ou senha estão incorretos ou não existem!",
+          });
 
-        const usuario = Usuario.find(usuario => usuario.email == email)
-
-        if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
-            return res.status(400).json({ mensagem: "Email ou senha estão incorretos ou não existem!" });
-        }
-
-
-        req.session.usuario = usuario
-
-        res.redirect('/servicos')
+      } else {
+        return res.json(usuario);
+      }
+    } catch (error) {
+      console.log(error);
     }
-}
-
-    module.exports = loginController
-
+  },
+};
+module.exports = loginController;
