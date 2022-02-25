@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 const storage = require('../config/storage')
-router.get('/', cadastroController.index)
+router.get('/cadastro', cadastroController.index)
 // router.post('/', uploadAvatar, cadastroController.save)
 
 

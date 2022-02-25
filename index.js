@@ -19,13 +19,23 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 //retornado as rotas
 app.use(loginRouter);
 app.use(perfilRouter);
 app.use(contaRouter);
 app.use(usuarios);
 
-//criando as rotas hhtp
+
+
+//criando as rotas http
 app.get("/", (req, res) => {
   return res.render("home");
 });
@@ -34,9 +44,9 @@ app.get("/cadastro", (req, res) => {
   return res.render("cadastro");
 });
 
-app.get("/home", (req, res) => {
-  return res.render("home");
-});
+// app.get("/home", (req, res) => {
+//   return res.render("home");
+// });
 
 app.get("/editarPerfil", (req, res) => {
   return res.render("editarPerfil");

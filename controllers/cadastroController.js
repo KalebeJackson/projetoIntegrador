@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt');
 const fs = require('fs');
 
-const usuariosModel = require('../models/usuarios.json');
 const path = require('path');
 const {Usuario} = require('../models')
 

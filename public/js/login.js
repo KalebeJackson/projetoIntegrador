@@ -1,3 +1,4 @@
+
 const botao = document.querySelector(".entrar");
 const email = document.querySelector(".email");
 const senha = document.querySelector(".senha");
@@ -18,9 +19,9 @@ console.log(user)
     headers: { "Content-Type": "application/json", 'Accept': "application/json" }
   };
 
-  fetch("http://localhost:8000/login", headers)
-    .then((resposta) => resposta.json())
-    .then((user) => {
+  axios.post("http://localhost:8000/login", user)
+    .then((resposta) => {
+      const user = resposta.data
         if(user && user.mensagem){
            return
         }
@@ -31,7 +32,15 @@ console.log(user)
       localStorage.setItem("usuario", JSON.stringify(usuario));
       window.location.href = "http://localhost:8000/conta";
     })
-    .catch((erro) => console.log(erro));
+    .catch((erro) => {
+      console.log(erro)
+      console.log("teste")
+      Swal.fire({
+        icon: 'error',
+        title: 'Opa, algo deu errado :(',
+        text: erro.mensagem,
+      })
+    });
 };
 
 

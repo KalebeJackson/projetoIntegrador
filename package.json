@@ -18,6 +18,7 @@
   "homepage": "https://github.com/KalebeJackson/projetoIntegrador#readme",
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
+    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",

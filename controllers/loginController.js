@@ -1,4 +1,5 @@
 const { Usuario } = require("../models");
+const bcrypt = require('bcrypt');
 // const botao = document.querySelector('.entrar')
 
 // botao.onclick = function(){
@@ -19,14 +20,15 @@ const loginController = {
         return res
           .status(400)
           .json({
-            mensagem: "Email ou senha estão incorretos ou não existem!",
+            mensagem: "Usuário não existe!",
           });}
-      if (Number(senha) !== usuario.senha) {
+      if (!bcrypt.compareSync(senha, usuario.senha)) {
         return res
           .status(400)
           .json({
-            mensagem: "Email ou senha estão incorretos ou não existem!",
+            mensagem: "Senha incorreta!",
           });
+
 
       } else {
         return res.json(usuario);
