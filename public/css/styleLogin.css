@@ -50,7 +50,7 @@ body{
 
 .caixa2{
     background-color: white;
-    margin-left: 25px;
+    justify-content:center;
     width: 368px;
     height: 56px;
     margin-top: 20px;
@@ -63,17 +63,7 @@ p{
     margin-left: 30px;
 }
 
-.google{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
-}
 
-.facebook{
-    padding: 12px 20px;
-    width: 30px;
-    height: 30px;
-}
 
 .coluna1{
     display: inline;
@@ -118,5 +108,10 @@ header nav ul li a:any-link {
     display: inline-block;
     padding: 10px;
     display: flex;
+    
+}
+
+.link{
+ 
     
 }
