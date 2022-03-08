@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false,
       },
       senha: {
-        type: dataTypes.INTEGER,
+        type: dataTypes.STRING,
         allowNull: false
       },
       permissao: {
