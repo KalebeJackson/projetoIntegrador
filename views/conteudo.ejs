@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conteudo</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleConteudo.css">
 </head>
 
 <body>
@@ -18,12 +18,70 @@
             <p>A história segue um grupo de quatro alunos de uma banda de rock amadora e as relações românticas que
                 se formam entre eles: entre o guitarrista Ritsuka Uenoyama e o vocalista Mafuyu Satō, e entre o
                 baixista Haruki Nakayama e o baterista Akihiko Kaji.</p>
-    
-                <article>
 
-                </article>
+            <form action="" method="POST">
+                <label for="volume">Volumes:</label>
+                <ul type="none">
+                    <li>
+                        <label for="volume">Volume 1</label>
+                        <input type="checkbox" name="volume" value="1">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 2</label>
+                        <input type="checkbox" name="volume" value="2">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 3</label>
+                        <input type="checkbox" name="volume" value="3">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 4</label>
+                        <input type="checkbox" name="volume" value="4">
+                    </li>
+                    <li><label for="volume">Volume 5</label>
+                        <input type="checkbox" name="volume" value="5">
+                    </li>
+                    <li><label for="volume">Volume 6</label>
+                        <input type="checkbox" name="volume" value="6">
+                    </li>
+                </ul>
 
-    
+                <label for="capitulo">Capítulo:</label>
+                <ul type="none">
+                    <li>
+                        <label for="capitulo">Capítulo 1</label>
+                        <input type="checkbox" name="capitulo" value="1">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 2</label>
+                        <input type="checkbox" name="capitulo" value="2">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 3</label>
+                        <input type="checkbox" name="capitulo" value="3">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 4</label>
+                        <input type="checkbox" name="capitulo" value="4">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 5</label>
+                        <input type="checkbox" name="capitulo" value="5">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 6</label>
+                        <input type="checkbox" name="capitulo" value="6">
+                    <li>
+                        <label for="capitulo">Capítulo 7</label>
+                        <input type="checkbox" name="capitulo" value="7">
+                    </li>
+                </ul>
+
+                <label for="pagina">Página:</label>
+                <input type="number" name="pagina" id="pagina">
+
+            </form>
+
             <h2>Informações da obra!</h2>
             <p>Período de publicação: 30 de abril de 2013 – presente.
                 <br />
@@ -33,10 +91,6 @@
                 <br />
             </p>
         </section>
-
-        <form>
-            
-        </form>
 
         <%- include('./partials/footer')%>
 </body>
