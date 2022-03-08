@@ -1,7 +1,11 @@
+const dotenv = require('dotenv')
+dotenv.config({
+    path: '.env'
+})
 const config = {
-    username: 'root',
-    password: '',
-    database: 'u_save_it',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     host: 'localhost',
     dialect: 'mysql', 
     use_env_variable: false,

@@ -36,7 +36,11 @@ module.exports = {
       capitulos: {
         type: dataTypes.INTEGER,
         allowNull: false
-      }
+      },
+      imagem: {
+        type: dataTypes.STRING,
+        allowNull: false,
+    }
     })
   },
   async down (queryInterface, dataTypes) {

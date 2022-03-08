@@ -42,7 +42,11 @@ module.exports = {
       capitulos: {
         type: Sequelize.INTEGER,
         allowNull: false,
-      }
+      },
+      imagem: {
+        type: dataTypes.STRING,
+        allowNull: false,
+    }
     });
   },
 

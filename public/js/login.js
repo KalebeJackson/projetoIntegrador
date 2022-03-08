@@ -10,14 +10,6 @@ botao.onclick = function (event) {
     senha: senha.value
   };
 console.log(user)
-  const headers = {
-    method: "POST",
-    //   headers: new Headers(),
-    body: JSON.stringify(user),
-
-    //   mode: 'no-cors'
-    headers: { "Content-Type": "application/json", 'Accept': "application/json" }
-  };
 
   axios.post("http://localhost:8000/login", user)
     .then((resposta) => {
@@ -33,12 +25,10 @@ console.log(user)
       window.location.href = "http://localhost:8000/conta";
     })
     .catch((erro) => {
-      console.log(erro)
-      console.log("teste")
       Swal.fire({
         icon: 'error',
         title: 'Opa, algo deu errado :(',
-        text: erro.mensagem,
+        text: erro.response.data.mensagem,
       })
     });
 };

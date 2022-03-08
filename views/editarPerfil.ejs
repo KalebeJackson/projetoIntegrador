@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/editarPerfil.css">
 </head>
 <body>
-    
+    <%- include('./partials/header-logado')%>
+
+    <section>
+        <ul class="ajustes">
+            <li>Perfil</li>
+            <li>Alterar senha</li>
+            <li>Privacidade</li>
+            <li>Atividade</li>
+        </ul>
+    </section>
+
+    <main>
+        <h2>Gerencie suas informações</h1>
+        <div>
+            <p>Aqui você pode editar suas informações e mudar as configurações de privacidade.</p>
+            <p>Para saber mais, leia nossos Termos de Serviço e Privacidade.</p>
+        </div>
+        <form>
+            <h4>Nome</h3>
+            <input type="text" name="" id="">
+            <h4>Username</h4>
+            <input type="text" name="" id="">
+            <h4>Bio</h4>
+            <input type="text" name="" id="">
+            <h4>E-mail</h4>
+            <input type="email" name="" id="">
+            <h4>Telefone</h4>
+            <input type="tel" name="" id="">
+
+            <br><input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
 </body>
 </html>

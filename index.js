@@ -7,7 +7,7 @@ const path = require("path");
 
 //importando as rotas da aplicação
 const loginRouter = require("./routes/login");
-const perfilRouter = require("./routes/perfil");
+const perfilRouter = require("./routes/editarPerfil");
 const usuarios = require("./routes/usuario");
 const contaRouter = require("./routes/conta");
 
@@ -64,9 +64,7 @@ app.get("/conteudo", (req, res) => {
   return res.render("conteudo");
 });
 
-app.get("/minhaConta", (req, res) => {
-  return res.render("perfil");
-});
+
 
 //indicando a porta do nosso servidor web
 app.listen(8000, () => {

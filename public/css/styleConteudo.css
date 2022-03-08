@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+nav {
+    margin: 0;
+    list-style: none;
+    height: 65px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#F7FFF5;
+    color: #FF8A4A;
+
+}
+
+div.form_div {
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    background-color:#E5E5E5;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 35px;
+}
+
+input[type=text] {
+    width: 150px;
+    height: 10px;
+    background-color: #fffbff10;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
