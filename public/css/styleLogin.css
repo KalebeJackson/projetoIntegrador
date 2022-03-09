@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
 body{
     background-image: url(../img/fundo-login.png);
     
@@ -77,9 +84,10 @@ p{
 }
 /*CSS do footer*/
 footer{
-    background-color: #F7FFF5;
-    margin:  212px 0px -8px -10px;
-    width: 1306px;
+    background-color:#F7FFF5;
+    color: #FF8A4A;
+    margin: 200px 0px 0px 0px;
+    width: 100%;
 }
 
 hr{
