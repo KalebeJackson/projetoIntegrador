@@ -65,7 +65,6 @@ app.get("/conteudo", (req, res) => {
 });
 
 
-
 //indicando a porta do nosso servidor web
 app.listen(8000, () => {
   console.log("Servidor rodando");
