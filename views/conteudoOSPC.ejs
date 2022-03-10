@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteudo</title>
+    <link rel="stylesheet" href="/css/styleConteudo.css">
+</head>
+
+<body>
+    <%- include('./partials/header-logado')%>
+
+        <section>
+            <h2 align="center"> Nanatsu no taizai </h2>
+            <img src="/img/nanatsu-no-taizai-anime.jpg" width=100% alt="">
+            <p>A princesa Elizabeth Liones decide, então, pedir ajuda aos Sete Pecados Mortais, um grupo de cavaleiros que, no passado, foi acusado de conspirar contra a família real e acabou desertando. Agora, eles precisam se unir para recuperar o trono e desmascarar os verdadeiros traidores.</p>
+
+            <form action="" method="POST">
+                <label for="volume">Volumes:</label>
+                <ul type="none">
+                    <li>
+                        <label for="volume">Volume 1</label>
+                        <input type="checkbox" name="volume" value="1">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 2</label>
+                        <input type="checkbox" name="volume" value="2">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 3</label>
+                        <input type="checkbox" name="volume" value="3">
+                    </li>
+                    <li>
+                        <label for="volume">Volume 4</label>
+                        <input type="checkbox" name="volume" value="4">
+                    </li>
+                    <li><label for="volume">Volume 5</label>
+                        <input type="checkbox" name="volume" value="5">
+                    </li>
+                    <li><label for="volume">Volume 6</label>
+                        <input type="checkbox" name="volume" value="6">
+                    </li>
+                </ul>
+
+                <label for="capitulo">Capítulo:</label>
+                <ul type="none">
+                    <li>
+                        <label for="capitulo">Capítulo 1</label>
+                        <input type="checkbox" name="capitulo" value="1">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 2</label>
+                        <input type="checkbox" name="capitulo" value="2">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 3</label>
+                        <input type="checkbox" name="capitulo" value="3">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 4</label>
+                        <input type="checkbox" name="capitulo" value="4">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 5</label>
+                        <input type="checkbox" name="capitulo" value="5">
+                    </li>
+                    <li>
+                        <label for="capitulo">Capítulo 6</label>
+                        <input type="checkbox" name="capitulo" value="6">
+                    <li>
+                        <label for="capitulo">Capítulo 7</label>
+                        <input type="checkbox" name="capitulo" value="7">
+                    </li>
+                </ul>
+
+                <label for="pagina">Página:</label>
+                <input type="number" name="pagina" id="pagina">
+
+            </form>
+
+            <h2>Informações da obra!</h2>
+            <p>Período de publicação: abril de 2014
+                <br />
+                Ilustrado por: Nakaba Suzuki.
+                <br />
+                Gêneros: Ficção de aventura, Fantasia, Comédia
+                <br />
+            </p>
+        </section>
+
+        <%- include('./partials/footer')%>
+</body>
+
+</html>

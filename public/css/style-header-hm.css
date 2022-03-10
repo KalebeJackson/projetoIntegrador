@@ -23,36 +23,48 @@ hr{
 }
 
 /*CSS da Navbar*/
-header nav ul {
+nav {
+    margin: 10;
     list-style: none;
-    background-color:#ebf3e400;
-    height: 67px;
-    margin-top: 0px;
-    display: flex;
-    padding: 10px;
+    height: 65px;
+    width: 100%;
+    display: inline-flex;
     justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* align-content: flex-end; */
-    align-items: baseline;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-top: 5px;
+    align-items: center;
+    background-color:#F7FFF5;
+    color: #FF8A4A;
 
 }
 
-header nav ul li a:any-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 28px;
-    color: #fff;
-    /* display: inline-block; */
-    padding: 10px;
-    display: flex;   
+input.barraDeBusca {
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    background-color:#E5E5E5;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 35px;
 }
 
+input[type=text] {
+    width: 150px;
+    height: 10px;
+    background-color: #fffbff10;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /*CSS da Home*/
 
 .criar{

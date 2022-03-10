@@ -8,8 +8,12 @@ html{
 
 body{
     background: #E5EAE3;
+    margin: 0px;
 }
 
+img{
+margin-left: -15px;
+}
 
 p{
     margin-left: 30px;

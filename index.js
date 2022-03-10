@@ -68,6 +68,10 @@ app.get("/conteudoHP", (req, res) => {
   return res.render("conteudoHP");
 });
 
+app.get("/conteudoOSPC", (req, res) => {
+  return res.render("conteudoOSPC");
+});
+
 
 //indicando a porta do nosso servidor web
 app.listen(8000, () => {
