@@ -64,6 +64,10 @@ app.get("/conteudo", (req, res) => {
   return res.render("conteudo");
 });
 
+app.get("/conteudoHP", (req, res) => {
+  return res.render("conteudoHP");
+});
+
 
 //indicando a porta do nosso servidor web
 app.listen(8000, () => {
