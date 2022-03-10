@@ -33,6 +33,7 @@ body{
     margin-left: 410px;
     margin-top: 200px;
     text-align: center;
+    align-content: center;
 }
 
 
@@ -47,6 +48,7 @@ header nav ul {
     list-style: none;
     background-color:#ebf3e400;
     height: 67px;
+    width: 100%;
     margin-top: 0px;
     display: flex;
     padding: 10px;
@@ -78,11 +80,12 @@ header nav ul li a:any-link {
 input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0 22px -22px;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
-  justify-content: center
+  background: #E8ECE5;
+  justify-content: center;
+  align-content: center;
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
@@ -124,7 +127,8 @@ button:hover {
 }
 
 .container {
-  padding: 16px;
+  padding: 16px 16px 16px 16px;
+  align-content: center;
 }
 
 .clearfix::after {
@@ -133,17 +137,17 @@ button:hover {
   display: table;
 }
 
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
-}
+} */
 
-header {
+/* header {
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
-}
+} */
 
 nav {
     margin: 0;
@@ -177,7 +181,6 @@ p {
     border-radius: 6px;
     margin-left: 1200px;
     
-
 }
 
 ul {
@@ -197,6 +200,12 @@ section {
     display: flex;
     justify-content: center;
     margin-top: -15px;
+}
+
+
+hr{
+  width: 100%;
+  margin-top: 10px;
 }
 
 
